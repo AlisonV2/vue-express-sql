@@ -9,10 +9,10 @@ import Router from "./routes/routes.js";
  
 // Init express
 const app = express();
-// use express json
+
 app.use(express.json());
-// use cors
 app.use(cors());
+app.use(express.static('public'));
  
 // Testing database connection 
 try {
