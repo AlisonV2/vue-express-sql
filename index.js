@@ -1,8 +1,9 @@
 import express from "express";
 import cors from "cors"; 
 import db from "./config/database.js";
-import Router from "./routes/routes.js";
- 
+import router from "./routes/routes.js";
+
+const port = process.env.PORT || 5000;
 const app = express();
 
 app.use(express.json());
@@ -22,8 +23,8 @@ app.get('/', (req,res) => {
     res.sendFile("client/index.html");
 });
 
-app.use(Router);
+app.use(router);
 
-app.listen(5000, () => {
-    console.log('Server running at http://localhost:5000')
+app.listen(port, () => {
+    console.log(`Server running on port ${port}`)
 });
