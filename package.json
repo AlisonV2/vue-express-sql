@@ -1,28 +1,48 @@
 {
   "name": "express-sql",
   "version": "1.0.0",
+  "private": true,
   "description": "express api with mysql",
-  "main": "index.js",
-  "type": "module",
+  "author": {
+    "name": "Alison Vandromme"
+  },
   "scripts": {
-    "serve": "node index.js",
-    "dev": "cd client && npm run serve",
-    "build-app": "git pull && npm run build-client && npm install && npm start",
-    "build-client": "cd client && npm run build-app && cd ..",
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "dev": "yarn start && yarn serve",
     "start": "node index.js",
     "test": "echo 'Error: no test specified' && exit 1"
   },
+  "main": "index.js",
+  "dependencies": {
+    "core-js": "^3.6.5",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "mysql2": "^2.3.0",
+    "sass": "^1.37.5",
+    "sequelize": "^6.6.5",
+    "vue": "^3.0.0",
+    "vue-router": "^4.0.0-0",
+    "vuex": "^4.0.0-0"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "~4.5.0",
+    "@vue/cli-plugin-router": "~4.5.0",
+    "@vue/cli-service": "~4.5.0",
+    "@vue/compiler-sfc": "^3.0.0",
+    "sass-loader": "^12.1.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ],
+  "_id": "express-sql@1.0.0",
+  "license": "MIT",
+  "readme": "ERROR: No README data found!",
   "repository": {
     "type": "git",
     "url": "git"
   },
-  "author": "Alison Vandromme",
-  "license": "MIT",
-  "dependencies": {
-    "cors": "^2.8.5",
-    "express": "^4.17.1",
-    "mysql2": "^2.3.0",
-    "sequelize": "^6.6.5"
-  },
-  "devDependencies": {}
+  "type": "module"
 }
