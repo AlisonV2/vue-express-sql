@@ -2,7 +2,7 @@
   "name": "express-sql",
   "version": "1.0.0",
   "private": true,
-  "description": "express api with mysql",
+  "description": "Express api with mysql and Vue client, both on the same port",
   "author": {
     "name": "Alison Vandromme"
   },
