@@ -7,7 +7,7 @@ const app = express();
 
 app.use(express.json());
 app.use(cors());
-app.use(express.static('public'));
+app.use(express.static('client'));
  
 try {
     await db.authenticate();
@@ -19,7 +19,7 @@ try {
 db.sync();
 
 app.get('/', (req,res) => {
-    res.sendFile("public/index.html");
+    res.sendFile("client/index.html");
 });
 // use router
 app.use(Router);

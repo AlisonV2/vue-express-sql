@@ -8,7 +8,7 @@
   },
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build && xcopy dist public /Y",
+    "build": "vue-cli-service build && xcopy dist client /Y",
     "start": "node index.js",
     "test": "echo 'Error: no test specified' && exit 1",
     "prod": "yarn build && yarn start"
