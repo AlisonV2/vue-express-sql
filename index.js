@@ -17,11 +17,14 @@ try {
 }
 
 db.sync();
-app.get('/', function (req,res) {
+
+app.get('/', (req,res) => {
     res.sendFile("public/index.html");
 });
 // use router
 app.use(Router);
  
 // listen on port
-app.listen(5000, () => console.log('Server running at http://localhost:5000'));
+app.listen(5000, () => {
+    console.log('Server running at http://localhost:5000')
+});
