@@ -5,8 +5,11 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "dev": "node index.js",
-    "build-app": 
+    "serve": "node index.js",
+    "dev": "cd client && npm run serve",
+    "build-app": "git pull && npm run build-client && npm install && npm start",
+    "build-client": "cd client && npm run build-app && cd ..",
+    "start": "node index.js",
     "test": "echo 'Error: no test specified' && exit 1"
   },
   "repository": {
@@ -20,5 +23,6 @@
     "express": "^4.17.1",
     "mysql2": "^2.3.0",
     "sequelize": "^6.6.5"
-  }
+  },
+  "devDependencies": {}
 }
