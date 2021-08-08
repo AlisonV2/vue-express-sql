@@ -7,7 +7,7 @@ const app = express();
 
 app.use(express.json());
 app.use(cors());
-// app.use(express.static('public'));
+app.use(express.static('public'));
  
 try {
     await db.authenticate();
@@ -16,9 +16,10 @@ try {
     console.error('Unable to connect to the database:', error);
 }
 
-// app.get('/', function (req,res) {
-//     res.sendFile(path + "index.html");
-// });
+db.sync();
+app.get('/', function (req,res) {
+    res.sendFile("public/index.html");
+});
 // use router
 app.use(Router);
  

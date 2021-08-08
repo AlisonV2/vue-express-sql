@@ -30,7 +30,7 @@ export default {
   methods: {
       handleUpdate() {
       fetch(this.uri, {
-        method: "PATCH",
+        method: "PUT",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ title: this.title, details: this.details })
       })

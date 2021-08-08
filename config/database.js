@@ -1,4 +1,3 @@
-// import sequelize
 import { Sequelize } from "sequelize";
  
 // create connection
