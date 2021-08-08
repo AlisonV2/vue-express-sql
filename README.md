@@ -45,4 +45,4 @@ yarn serve
 ```
 yarn prod
 ```
-This command will build the app, copy the ```/dist``` folder to the ```/public``` folder (overwritting) and start the node instance.
+This command will build the app, copy the ```/dist``` folder to the ```/client``` folder (overwritting) and start the node instance.
