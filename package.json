@@ -8,10 +8,10 @@
   },
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "dev": "yarn start && yarn serve",
+    "build": "vue-cli-service build && xcopy dist public /Y",
     "start": "node index.js",
-    "test": "echo 'Error: no test specified' && exit 1"
+    "test": "echo 'Error: no test specified' && exit 1",
+    "prod": "yarn build && yarn start"
   },
   "main": "index.js",
   "dependencies": {
