@@ -30,7 +30,7 @@ export default {
     };
   },
   mounted() {
-    fetch("http://localhost:5000/projects")
+    fetch(process.env.VUE_APP_API_URL)
       .then((res) => res.json())
       .then((data) => (this.projects = data))
       .catch((err) => console.log(err.message));

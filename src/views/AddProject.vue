@@ -23,7 +23,7 @@ export default {
         details: this.details,
         complete: false,
       };
-      fetch("http://localhost:5000/projects", {
+      fetch(process.env.VUE_APP_API_URL, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(project),

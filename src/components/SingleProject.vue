@@ -22,7 +22,7 @@ export default {
   data() {
     return {
       showDetails: false,
-      uri: "http://localhost:5000/projects/" + this.project.id,
+      uri: process.env.VUE_APP_API_URL + "/" + this.project.id,
     };
   },
   methods: {

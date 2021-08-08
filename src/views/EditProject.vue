@@ -13,7 +13,7 @@ export default {
   props: ["id"],
   data() {
     return {
-      uri: "http://localhost:5000/projects/" + this.id,
+      uri: VUE_APP_API_URL + '/' + this.id,
       title: "",
       details: "",
     };
