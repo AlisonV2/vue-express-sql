@@ -13,7 +13,7 @@ export default {
   props: ["id"],
   data() {
     return {
-      uri: VUE_APP_API_URL + '/' + this.id,
+      uri: process.env.VUE_APP_API_URL + '/' + this.id,
       title: "",
       details: "",
     };
